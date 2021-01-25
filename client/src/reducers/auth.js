@@ -27,7 +27,7 @@ function authReducer(state = initialState, action) {
       };
     case REGISTER_SUCCESS:
     case LOGIN_SUCCESS:
-      localStorage.removeItem("token");
+      localStorage.setItem("token", payload.token);
       return {
         ...state,
         ...payload,
